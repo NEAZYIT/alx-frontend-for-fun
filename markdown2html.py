@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Python script that converts a Markdown file to HTML, parsing headings, unordered list, and ordered list syntax.
+Python script that converts a Markdown file to HTML.
+Parses headings, unordered list, and ordered list syntax.
 """
 
 import sys
@@ -10,7 +11,7 @@ import re
 
 def parse_heading(line):
     """
-    Parse Markdown heading syntax and generate corresponding HTML tag.
+    Parse Markdown heading syntax and generate HTML tag.
     """
     match = re.match(r'^(#+)\s(.*)$', line)
     if match:
@@ -22,7 +23,7 @@ def parse_heading(line):
 
 def parse_unordered_list(line):
     """
-    Parse Markdown unordered list syntax and generate corresponding HTML tag.
+    Parse Markdown unordered list syntax and generate HTML tag.
     """
     match = re.match(r'^-\s(.*)$', line)
     if match:
@@ -33,7 +34,7 @@ def parse_unordered_list(line):
 
 def parse_ordered_list(line):
     """
-    Parse Markdown ordered list syntax and generate corresponding HTML tag.
+    Parse Markdown ordered list syntax and generate HTML tag.
     """
     match = re.match(r'^\*\s(.*)$', line)
     if match:
@@ -45,7 +46,8 @@ def parse_ordered_list(line):
 if __name__ == '__main__':
     # Check if correct number of arguments provided
     if len(sys.argv) != 3:
-        print("Usage: ./markdown2html.py <input_file> <output_file>", file=sys.stderr)
+        print("Usage: ./markdown2html.py <input_file> <output_file>",
+              file=sys.stderr)
         sys.exit(1)
 
     markdown_file = sys.argv[1]
@@ -56,7 +58,8 @@ if __name__ == '__main__':
         print(f"Missing {markdown_file}", file=sys.stderr)
         sys.exit(1)
 
-    # Read Markdown content and parse headings, unordered lists, and ordered lists
+    # Read Markdown content and parse headings
+    # unordered lists, and ordered lists
     with open(markdown_file, 'r') as md_file:
         md_content = md_file.readlines()
 
