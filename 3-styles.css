@@ -1,0 +1,118 @@
+:root {
+    --is-red: #D73953;
+    --btn-transition: 0.1s ease-out;
+    --circle-size: 3rem;
+    /* Increase button size */
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Move menu to the right */
+    position: absolute;
+    top: 20px;
+    /* Adjust menu position from top */
+    right: 20px;
+    /* Adjust menu position from right */
+}
+
+.menu-open {
+    display: none;
+}
+
+.menu-open-button {
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    background-color: var(--is-red);
+    height: var(--circle-size);
+    width: var(--circle-size);
+    margin-bottom: 10px;
+    /* Increase spacing */
+}
+
+.menu-line {
+    margin: 1px auto;
+    width: 12px;
+    /* Increase line width */
+    height: 2px;
+    /* Increase line height */
+    background: white;
+}
+
+.menu-item {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    /* Increase font size */
+    border-radius: 50%;
+    background-color: var(--is-red);
+    height: var(--circle-size);
+    width: var(--circle-size);
+    margin-bottom: 10px;
+    /* Increase spacing */
+}
+
+.menu-open-button:hover {
+    height: 3.5rem;
+    /* Increase button size on hover */
+    width: 3.5rem;
+    /* Increase button size on hover */
+    transition: 0.1s ease-out;
+}
+
+.menu-open-button:hover .menu-line-1 {
+    margin-top: 16px;
+    /* Adjust line spacing on hover */
+    transition: var(--btn-transition);
+}
+
+.menu-open-button:hover .menu-line {
+    margin-top: 8px auto;
+    /* Adjust line spacing on hover */
+}
+
+.menu-line-1 {
+    margin-top: 15px;
+    /* Adjust line spacing */
+}
+
+.menu-open:checked~.menu-open-button, .menu-open:checked~.menu-item {
+    height: 2.5rem;
+    /* Increase button and sub-button size */
+    width: 2.5rem;
+    /* Increase button and sub-button size */
+    font-size: 1.2rem;
+    /* Increase font size */
+}
+
+.menu-open:checked~.menu-open-button>.menu-line-3 {
+    display: none;
+}
+
+.menu-open:checked~.menu-open-button>.menu-line-1 {
+    transform: rotate(45deg);
+    margin-top: 14px;
+    /* Adjust line spacing */
+    transition: var(--btn-transition);
+}
+
+.menu-open:checked~.menu-open-button>.menu-line-2 {
+    transform: rotate(-45deg);
+    margin-top: -3px;
+    /* Adjust line spacing */
+    transition: var(--btn-transition);
+}
+
+.menu-open:checked~.menu-item {
+    display: flex;
+}
+
+.menu-open:checked~.menu-item:hover {
+    background-color: white;
+    color: var(--is-red);
+    border: 1px solid var(--is-red);
+}
