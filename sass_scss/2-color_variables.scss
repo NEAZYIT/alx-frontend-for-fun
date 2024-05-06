@@ -1,0 +1,19 @@
+/*
+  File: 2-color_variables.scss
+  Description: Assigns text color #3D3D3D to HTML tags body and p, and background color #6D6D6D to body and h2 using Sass variables.
+*/
+
+// Define Sass variables for text and background colors
+$text-color: #3D3D3D;
+$background-color: #6D6D6D;
+
+// Apply text color to body and p tags, and background color to body and h2 tags
+body,
+p {
+    color: $text-color;
+}
+
+body,
+h2 {
+    background-color: $background-color;
+}
