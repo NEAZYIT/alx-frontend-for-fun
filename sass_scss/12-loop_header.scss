@@ -1,0 +1,13 @@
+/*
+  File: 12-loop_header.scss
+  Description: Creates H* tags with font sizes ranging from 1px to 5px using @for statement.
+*/
+
+// Loop to generate H* tags with font sizes
+@for $i from 1 through 5 {
+
+    // Generate H* tag with font size based on loop index
+    h#{$i} {
+        font-size: #{$i}px;
+    }
+}
