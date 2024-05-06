@@ -1,0 +1,17 @@
+/*
+  File: 11-loop_photos.scss
+  Description: Creates classes for each name in the list and assigns background images based on names.
+*/
+
+// Import list of names
+@import "11-photos.scss";
+
+// Loop through the list of names
+@each $name in $list-names {
+
+    // Generate class name
+    .photo-#{$name} {
+        // Assign background image based on name
+        background: image-url("photos/#{$name}.jpg") no-repeat;
+    }
+}
