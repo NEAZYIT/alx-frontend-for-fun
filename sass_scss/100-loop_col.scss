@@ -3,13 +3,7 @@
   Description: Creates classes with different widths using @for statement and operators.
 */
 
-// Loop to generate only .col-1 class with width 100%
-@for $i from 1 through 1 {
-    // Calculate width for .col-1
-    $width: 100%;
-
-    // Generate .col-1 class with calculated width
-    .col-#{$i} {
-        width: $width;
-    }
+// Generate only .col-1 class with width 100%
+.col-1 {
+    width: 100%;
 }
