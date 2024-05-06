@@ -1,0 +1,16 @@
+/*
+  File: 1-color_variable.scss
+  Description: Assigns the text color #3D3D3D to the HTML tags body and p using a Sass variable.
+*/
+
+// Define Sass variable for text color
+$text-color: #3D3D3D;
+
+// Apply text color to body and p tags
+body {
+    color: $text-color;
+}
+
+p {
+    color: $text-color;
+}
