@@ -1,0 +1,15 @@
+/*
+  File: 100-loop_col.scss
+  Description: Creates classes with different widths using @for statement and operators.
+*/
+
+// Loop to generate classes with different widths
+@for $i from 1 through 4 {
+    // Calculate width based on loop index
+    $width: 100% / $i;
+
+    // Generate .col-* class with calculated width
+    .col-#{$i} {
+        width: $width;
+    }
+}
