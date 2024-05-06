@@ -1,0 +1,14 @@
+/*
+  File: 5-nested_child.scss
+  Description: Assigns text color to elements inside body tags and to elements of class .red that are the first children of the body using nested declarations.
+*/
+
+// Apply styles to body tag
+body {
+    color: #3D3D3D; // Text color for elements inside body tags
+
+    // Apply styles to elements of class .red that are the first children of the body
+    >.red {
+        color: #FF0000; // Text color for elements of class .red that are first children of the body
+    }
+}
