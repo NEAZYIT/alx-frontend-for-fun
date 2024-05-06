@@ -1,0 +1,20 @@
+/*
+  File: 10-import_colors.scss
+  Description: Assigns text colors to classes using variables imported from 10-colors.scss.
+*/
+
+// Import colors from 10-colors.scss
+@import "10-colors.scss";
+
+// Assign text color from imported variables to respective classes
+.red {
+    color: $red;
+}
+
+.green {
+    color: $green;
+}
+
+.blue {
+    color: $blue;
+}
