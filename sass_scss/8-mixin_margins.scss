@@ -1,0 +1,20 @@
+/*
+  File: 8-mixin_margins.scss
+  Description: Assigns margin left and right to body and div tags using a mixin.
+*/
+
+// Define mixin for setting margin
+@mixin set-margin($left, $right) {
+    margin-left: $left;
+    margin-right: $right;
+}
+
+// Apply margin to body tags using mixin
+body {
+    @include set-margin(10px, 10px); // Margin left and right at 10px
+}
+
+// Apply margin to div tags using mixin
+div {
+    @include set-margin(15px, 15px); // Margin left and right at 15px
+}
