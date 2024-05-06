@@ -7,7 +7,6 @@
 @for $i from 1 through 4 {
     // Calculate width based on loop index
     $width: 100% / $i;
-
     // Generate .col-* class with calculated width
     .col-#{$i} {
         width: $width;
