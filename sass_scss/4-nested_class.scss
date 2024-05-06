@@ -1,0 +1,14 @@
+/*
+  File: 4-nested_class.scss
+  Description: Assigns text color to elements inside body tags and to elements of class .red inside body tags using nested declarations.
+*/
+
+// Apply styles to body tag
+body {
+    color: #3D3D3D; // Text color for elements inside body tags
+
+    // Apply styles to elements of class .red nested inside body tags
+    .red {
+        color: #FF0000; // Text color for elements of class .red
+    }
+}
