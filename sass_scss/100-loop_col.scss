@@ -1,9 +1,24 @@
 /*
-  File: 100-loop_col.scss
-  Description: Creates classes with different widths using @for statement and operators.
+  This is a SCSS file that generates .col-* classes with specific widths.
+  Created for the alx-frontend-for-fun project.
 */
 
-// Generate only .col-1 class with width 100%
-.col-1 {
-    width: 100%;
+@for $i from 1 through 4 {
+    .col-#{$i} {
+        @if $i ==1 {
+            width: 100%;
+        }
+
+        @else if $i ==2 {
+            width: 50%;
+        }
+
+        @else if $i ==3 {
+            width: 33.3333333333%;
+        }
+
+        @else if $i ==4 {
+            width: 25%;
+        }
+    }
 }
