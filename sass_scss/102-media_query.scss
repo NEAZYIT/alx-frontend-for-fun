@@ -1,0 +1,30 @@
+/*
+  File: style.scss
+  Description: This SCSS file sets the font size of h1 tags and the text color of h1.small tags based on the screen width.
+  Created for the alx-frontend-for-fun project.
+*/
+
+// Set the font size of h1 tags to 20px by default
+h1 {
+    font-size: 20px;
+
+    // Media query for screen widths up to 960px
+    @media screen and (max-width: 960px) {
+        font-size: 18px; // Reduce font size to 18px
+    }
+
+    // Media query for screen widths up to 640px
+    @media screen and (max-width: 640px) {
+        font-size: 16px; // Reduce font size to 16px
+    }
+
+    // Media query for screen widths up to 320px
+    @media screen and (max-width: 320px) {
+        font-size: 14px; // Reduce font size to 14px
+
+        // Apply custom text color to h1 tags with the class 'small'
+        &.small {
+            color: #1D1D1D;
+        }
+    }
+}
