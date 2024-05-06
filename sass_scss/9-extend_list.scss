@@ -1,0 +1,21 @@
+/*
+  File: 9-extend_list.scss
+  Description: Assigns font size and text color to different classes.
+*/
+
+// Font size for all tags with class .info
+.info {
+    font-size: 12px;
+}
+
+// Text color for .success class and extend style of .info class
+.success {
+    @extend .info; // Extend styles from .info class
+    color: #00FF00; // Text color for .success class
+}
+
+// Text color for .warning class and extend style of .info class
+.warning {
+    @extend .info; // Extend styles from .info class
+    color: #FF0000; // Text color for .warning class
+}
