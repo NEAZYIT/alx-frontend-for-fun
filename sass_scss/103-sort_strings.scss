@@ -1,0 +1,38 @@
+/*
+  File: sort_list.scss
+  Description: This SCSS file defines a function to sort a list alphabetically based on the first character of each element.
+*/
+
+// Define the list to sort
+$list_to_sort: john anna zoe kim felicia carrie;
+
+// Define a function to sort the list
+@function sort($list) {
+    // Get the length of the list
+    $length: length($list);
+
+    // Loop through each element in the list
+    @for $i from 1 through $length {
+
+        // Another loop to compare elements
+        @for $j from $i through $length {
+
+            // Compare the first character of each element
+            @if str-slice("#{nth($list, $j)}", 1, 1) < str-slice("#{nth($list, $i)}", 1, 1) {
+                // Swap elements if necessary
+                $temp: nth($list, $i);
+                $list: set-nth($list, $i, nth($list, $j));
+                $list: set-nth($list, $j, $temp);
+            }
+        }
+    }
+
+    // Return the sorted list
+    @return $list;
+}
+
+// Sort the list using the defined function
+$list_to_sort: sort($list_to_sort);
+
+// Print the sorted list for debugging
+@debug $list_to_sort;
